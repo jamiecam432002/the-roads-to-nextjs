@@ -1,5 +1,28 @@
 {
-  "node": {},
+  "node": {
+    "40c99449b69a716d4de38f4662b47bf25581acf19c": {
+      "workers": {
+        "app/tickets/[ticketId]/page": {
+          "moduleId": 5556,
+          "async": true,
+          "exportedName": "deleteTicket",
+          "filename": "src/features/ticket/actions/delete-ticket.ts"
+        },
+        "app/tickets/page": {
+          "moduleId": 94673,
+          "async": true,
+          "exportedName": "deleteTicket",
+          "filename": "src/features/ticket/actions/delete-ticket.ts"
+        }
+      },
+      "layer": {
+        "app/tickets/[ticketId]/page": "rsc",
+        "app/tickets/page": "rsc"
+      },
+      "filename": "src/features/ticket/actions/delete-ticket.ts",
+      "exportedName": "deleteTicket"
+    }
+  },
   "edge": {},
-  "encryptionKey": "VYZ+ri/N52zHm57ZXHguNJ+W+v8vcyOqv/lei+OJRHs="
+  "encryptionKey": "AjtyewvMzOcje1N//B7vnPNM8gclEDOkeWbFwDz7p7Y="
 }
