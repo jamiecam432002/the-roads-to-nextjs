@@ -11,6 +11,7 @@ export const deleteTicket = async (id: string) => {
 		where: { id },
 	});
 	revalidatePath(ticketsPath());
-	setCookieByKey('toast', 'Ticket deleted');
+	await setCookieByKey('toast', 'Ticket deleted');
+	console.log('ticket deleted');
 	redirect(ticketsPath());
 };

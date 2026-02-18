@@ -6,13 +6,18 @@ import { toast } from 'sonner';
 
 export default function RedirectToast() {
 	useEffect(() => {
-		const message = getCookieByKey('toast');
+		const showCookieToast = async () => {
+			const message = await getCookieByKey('toast');
+			console.log(message);
 
-		if (message) {
-			toast.success(message);
-			deleteCookieByKey('toast');
-		}
-		// TODO: CHECK IF THERE IS A COOKIE
+			if (message) {
+				toast.success(message);
+				await deleteCookieByKey('toast');
+			}
+			// TODO: CHECK IF THERE IS A COOKIE
+		};
+
+		showCookieToast();
 	}, []);
 
 	return null;

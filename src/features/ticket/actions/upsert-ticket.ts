@@ -42,7 +42,8 @@ export async function upsertTicket(
 
 	revalidatePath(ticketsPath());
 	if (id) {
-		setCookieByKey('toast', 'Ticket updated');
+		await setCookieByKey('toast', 'Ticket updated');
+		console.log('ticket updated');
 		redirect(ticketPath(id));
 	}
 	return toActionState('SUCCESS', 'Ticket created');
