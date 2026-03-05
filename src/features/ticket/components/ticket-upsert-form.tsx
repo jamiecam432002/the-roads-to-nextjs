@@ -12,6 +12,7 @@ import { toast } from 'sonner';
 import { EMPTY_ACTION_STATE } from '@/components/form/utils/to-action-state';
 import useActionFeedback from '@/components/form/hooks/use-action-feedback';
 import Form from '@/components/form/form';
+import { fromCent } from '@/utils/currency';
 
 type TicketUpsertFormProps = {
 	ticket?: Ticket;
@@ -45,6 +46,37 @@ export default function TicketUpsertForm({ ticket }: TicketUpsertFormProps) {
 				}
 			/>
 			<FieldError name='content' actionState={actionState} />
+
+			<div className='flex gap-x-2 mb-1'>
+				<div className='w-1/2'>
+					<Label htmlFor='deadline'>Deadline</Label>
+					<Input
+						type='date'
+						id='deadline'
+						name='deadline'
+						defaultValue={
+							(actionState.payload?.get('deadline') as string) ??
+							ticket?.deadline
+						}
+					/>
+					<FieldError name='deadline' actionState={actionState} />
+				</div>
+
+				<div className='w-1/2'>
+					<Label htmlFor='bounty'>Bounty ($)</Label>
+					<Input
+						type='number'
+						step='.01'
+						id='bounty'
+						name='bounty'
+						defaultValue={
+							(actionState.payload?.get('bounty') as string) ??
+							(ticket?.bounty ? fromCent(ticket?.bounty) : '')
+						}
+					/>
+					<FieldError name='bounty' actionState={actionState} />
+				</div>
+			</div>
 
 			<SubmitButton label={ticket ? 'Update' : 'Create'} />
 		</Form>
