@@ -3,6 +3,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js",
+  "/tickets/[ticketId]/edit/page": "app/tickets/[ticketId]/edit/page.js",
   "/tickets/[ticketId]/page": "app/tickets/[ticketId]/page.js",
   "/tickets/page": "app/tickets/page.js"
 }

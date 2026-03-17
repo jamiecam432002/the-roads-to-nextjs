@@ -8,6 +8,10 @@
       "static/media/GeistVF-s.p.4c3c0b96.woff",
       "static/media/GeistMonoVF-s.p.2cee7d16.woff"
     ],
+    "[project]/src/app/tickets/[ticketId]/edit/page": [
+      "static/media/GeistVF-s.p.4c3c0b96.woff",
+      "static/media/GeistMonoVF-s.p.2cee7d16.woff"
+    ],
     "[project]/src/app/tickets/[ticketId]/page": [
       "static/media/GeistVF-s.p.4c3c0b96.woff",
       "static/media/GeistMonoVF-s.p.2cee7d16.woff"
